@@ -1,10 +1,7 @@
-import React from 'react'
-
 export const Home = () => {
+    console.log('1');
 
-    console.log('there');
-    
-    return <div>ExamPage</div>
+    return <button>1</button>
 }
 
 export default Home

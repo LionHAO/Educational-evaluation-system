@@ -14,7 +14,7 @@ function App() {
     //   : location.pathname === '/'
     //     ? navigate('/home/teach')
     //     : navigate(location.pathname)
-    navigate('/home')
+    navigate('/login')
   })
 
   return (

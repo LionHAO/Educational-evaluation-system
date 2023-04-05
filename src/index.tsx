@@ -6,8 +6,10 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import en_GB from 'antd/locale/en_GB';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import Home from 'pages/Home'
+import Login from './pages/Login'
+import ConfigProvider from 'antd/es/config-provider'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
@@ -15,13 +17,20 @@ const queryClient = new QueryClient()
 
 root.render(
     <Router>
-        <QueryClientProvider client={queryClient}>
-            <Routes>
-                <Route path="/" element={<App />}>
-                    {/* <Route path="home" element={<Home />}></Route> */}
-                </Route>
-            </Routes>
-        </QueryClientProvider>
+        <ConfigProvider
+            locale={en_GB} //英文包
+            theme={{ //主题
+                token: {
+                    colorPrimary: '#00b96b',
+                },
+            }}>
+            <QueryClientProvider client={queryClient} >
+                <Routes>
+                    <Route path="/" element={<App />}></Route>
+                    <Route path="login" element={<Login />} ></Route>
+                </Routes>
+            </QueryClientProvider>
+        </ConfigProvider>
     </Router>
 )
 
