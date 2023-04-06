@@ -1,6 +1,36 @@
-#root {
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+
   margin: 0;
   padding: 0;
   text-align: center;
   justify-content: center;
+  height: 100%;
+
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;  /*控制浏览器可以合成（synthesize）哪些缺失的字体，粗体或斜体。*/
+  
+  /* 定义浏览器渲染引擎如何渲染字体。浏览器会在速度、清晰度、几何精度之间进行权衡。
+  optimizeLegibility:浏览器在绘制文本时将着重考虑渲染速度，而不是易读性和几何精度。它会使字间距和连字无效。 */
+  text-rendering: optimizeLegibility;  
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }

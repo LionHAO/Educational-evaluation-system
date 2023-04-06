@@ -14,6 +14,7 @@ interface RequestConfig extends AxiosRequestConfig {
 }
 
 interface Data<T> {
+  obj: T | PromiseLike<T>
   data: T
   returnCode: string
   success: boolean
@@ -47,7 +48,7 @@ class Request {
       this.instance
         .request<any, Data<T>>(config)
         .then((res) => {
-          resolve(res.data)
+          resolve(res.obj)
         })
         .catch((err) => {
           reject(err)

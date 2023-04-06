@@ -8,8 +8,11 @@ import { Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import en_GB from 'antd/locale/en_GB';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import Login from './pages/Login'
+// import Login from './pages/LoginPages/Login'
 import ConfigProvider from 'antd/es/config-provider'
+import Login from '@/pages/LoginPages/Login'
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
@@ -21,7 +24,7 @@ root.render(
             locale={en_GB} //英文包
             theme={{ //主题
                 token: {
-                    colorPrimary: '#00b96b',
+                    colorPrimary: '#0003b9',
                 },
             }}>
             <QueryClientProvider client={queryClient} >

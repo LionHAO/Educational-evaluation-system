@@ -1,0 +1,37 @@
+.LoginWrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: linear-gradient(62deg, #8EC5FC 0%, #f6f6f6 100%); */
+    background-image: url('https://source.unsplash.com/random/1600x800/?star');
+
+}
+.LoginForm{
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  max-width: 190px;
+  border: 1px solid #dadada;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3f7fe;
+  transition: .3s;
+  color: #3b82f6;
+}
+
+.input:focus {
+  border: 1px solid #0003b9;
+  box-shadow: 0 0 0 4px #3b83f65f
+}
